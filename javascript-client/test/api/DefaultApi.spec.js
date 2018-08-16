@@ -60,6 +60,16 @@
         done();
       });
     });
+    describe('treatmentOptionsOptions', function() {
+      it('should call treatmentOptionsOptions successfully', function(done) {
+        //uncomment below and update the code to test treatmentOptionsOptions
+        //instance.treatmentOptionsOptions(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

@@ -16,7 +16,7 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/TreatmentOptions'], factory);
+    define(['../ApiClient', '../model/TreatmentOptions'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
     module.exports = factory(require('../ApiClient'), require('../model/TreatmentOptions'));
@@ -94,8 +94,56 @@
       var accepts = ['application/xml', 'application/json'];
       var returnType = [TreatmentOptions];
 
+      
+      // return this.apiClient.callApi(
+      //   '/treatmentOptions', 'GET',
+      //   pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+      //   authNames, contentTypes, accepts, returnType, callback
+      // );
+      
+
+      
+      var url = encodeURI('http://localhost:3001/api/treatmentOptions?' + 'Disease='+ queryParams.Disease + '&Race=' +queryParams.Race + '&dxGrade=' + queryParams.dxGrade);
+      var xmlHttp = new XMLHttpRequest();
+      xmlHttp.open("GET", url, false);
+      xmlHttp.send(null);
+      return xmlHttp.responseText;
+
+    }
+
+    /**
+     * Callback function to receive the result of the treatmentOptionsOptions operation.
+     * @callback module:api/DefaultApi~treatmentOptionsOptionsCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {module:api/DefaultApi~treatmentOptionsOptionsCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.treatmentOptionsOptions = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = [];
+      var returnType = null;
+
       return this.apiClient.callApi(
-        '/treatmentOptions', 'GET',
+        '/treatmentOptions', 'OPTIONS',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
