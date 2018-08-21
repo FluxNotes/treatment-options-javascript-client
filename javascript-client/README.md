@@ -20,7 +20,7 @@ please follow the procedure in ["Publishing npm packages"](https://docs.npmjs.co
 Then install it in the project directory via:
 
 ```shell
-npm install flux_notes_treatment_options_rest_client --save
+yarn add flux_notes_treatment_options_rest_client --save
 ```
 
 ##### Local development
