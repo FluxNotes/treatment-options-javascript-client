@@ -65,7 +65,7 @@
      * @param {module:api/DefaultApi~findTreatmentOptionsByPatientStatsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/TreatmentOptions>}
      */
-    this.findTreatmentOptionsByPatientStats = function(disease, opts, callback) {
+    this.findTreatmentOptionsByPatientStats = function(disease, opts) {
       opts = opts || {};
       var postBody = null;
 
@@ -95,20 +95,11 @@
       var returnType = [TreatmentOptions];
 
       
-      // return this.apiClient.callApi(
-      //   '/treatmentOptions', 'GET',
-      //   pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-      //   authNames, contentTypes, accepts, returnType, callback
-      // );
-      
-
-      
-      var url = encodeURI('http://localhost:3001/api/treatmentOptions?' + 'Disease='+ queryParams.Disease + '&Race=' +queryParams.Race + '&dxGrade=' + queryParams.dxGrade);
-      var xmlHttp = new XMLHttpRequest();
-      xmlHttp.open("GET", url, false);
-      xmlHttp.send(null);
-      return xmlHttp.responseText;
-
+      return this.apiClient.callApi(
+        '/treatmentOptions', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
     }
 
     /**
