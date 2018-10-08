@@ -94,8 +94,8 @@
       };
       var queryParams = {
         'disease': disease,
-        'race': opts['race'],
-        'dxGrade': opts['dxGrade'],
+        'Race': opts['race'],
+        'Dx-Grade': opts['dxGrade'],
         'ageAtDiagnosis': opts['ageAtDiagnosis'],
         'gender': opts['gender'],
         'stageAtDiagnosis': opts['stageAtDiagnosis'],
@@ -134,6 +134,7 @@
         authNames, contentTypes, accepts, returnType
       );
     }
+
 
     /**
      * Callback function to receive the result of the treatmentOptionsOptions operation.

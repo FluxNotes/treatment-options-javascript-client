@@ -100,8 +100,8 @@ var api = new FluxNotesTreatmentOptionsRestClient.DefaultApi()
 var disease = "disease_example"; // {String} disease filter
 
 var opts = { 
-  'race': "race_example", // {String} race filter
-  'dxGrade': "dxGrade_example", // {String} grade of disease filter
+  'Race': "race_example", // {String} race filter
+  'Dx-Grade': "dxGrade_example", // {String} grade of disease filter
   'ageAtDiagnosis': "ageAtDiagnosis_example", // {String} age at diagnosis filter
   'gender': "gender_example", // {String} patient gender filter
   'stageAtDiagnosis': "stageAtDiagnosis_example", // {String} stage at diagnosis filter
