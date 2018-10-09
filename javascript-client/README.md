@@ -104,14 +104,11 @@ var opts = {
   'dxGrade': "dxGrade_example" // {String} grade of disease filter
 };
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.findTreatmentOptionsByPatientStats(disease, opts, callback);
+api.findTreatmentOptionsByPatientStats(disease, opts, callback).then((res) => { 
+	console.log('API Called successfully with response: ', res);
+}).catch((error) => { 
+	console.log(error);
+});
 
 ```
 
