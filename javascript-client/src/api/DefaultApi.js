@@ -88,7 +88,7 @@
       if (disease === undefined || disease === null) {
         throw new Error("Missing the required parameter 'disease' when calling findTreatmentOptionsByPatientStats");
       }
-
+  
 
       var pathParams = {
       };
@@ -125,7 +125,7 @@
       var authNames = [];
       var contentTypes = [];
       var accepts = ['application/xml', 'application/json'];
-      var returnType = [TreatmentOptions];
+      var returnType = {TreatmentOptions};
 
       
       return this.apiClient.callApi(
