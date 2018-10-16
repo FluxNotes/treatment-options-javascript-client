@@ -1,6 +1,6 @@
 {
   "name": "flux_notes_treatment_options_rest_client",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "FluxNotes_Treatment_Options_Rest_Client",
   "license": "Unlicense",
   "main": "src/index.js",
