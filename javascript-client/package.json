@@ -11,14 +11,11 @@
     "fs": false
   },
   "dependencies": {
-    "superagent": "^3.8.3",
-    "webpack": "^4.16.5"
+    "superagent": "3.5.2"
   },
   "devDependencies": {
-    "expect.js": "~0.3.1",
-    "imports-loader": "^0.8.0",
     "mocha": "~2.3.4",
     "sinon": "1.17.3",
-    "webpack-dev-server": "^3.1.5"
+    "expect.js": "~0.3.1"
   }
 }
