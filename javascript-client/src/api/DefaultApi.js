@@ -125,7 +125,7 @@
       var authNames = [];
       var contentTypes = [];
       var accepts = ['application/xml', 'application/json'];
-      var returnType = {TreatmentOptions};
+      var returnType = TreatmentOptions;
 
       
       return this.apiClient.callApi(
